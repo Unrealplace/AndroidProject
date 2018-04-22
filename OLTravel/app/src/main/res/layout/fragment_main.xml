@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_main_header_ad"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+
+        >
+
+    </android.support.v4.view.ViewPager>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/mian_search">
+
+    </include>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:src="@mipmap/nav_header_index"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"/>
+
+    <!--主页内容-->
+    <com.oliver.oltravel.Fragment.ScrollInterceptScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewpager_main_header_ad"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--菜单详情-->
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/recyclerview_main_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+            <!--旅游热讯-->
+            <LinearLayout
+                android:id="@+id/main_tra_hot_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_below="@id/recyclerview_main_menu">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/main_hot_news"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="夏天真的来了，吃火锅就按这个火锅地图来走下去就好！"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+            <!--旅游特惠-->
+            <LinearLayout
+                android:id="@+id/main_sail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/main_tra_hot_info"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/main_spread1"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/main_spread2"
+                        android:layout_marginLeft="5dp"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="0.5"
+
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/main_spread3"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.5"
+
+                        />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/main_spread4"/>
+
+
+
+            </LinearLayout>
+
+
+            <!--旅游直播-->
+            <RelativeLayout
+                android:id="@+id/main_online"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_sail"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_online_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/main_travle_online"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_online_icon"
+                    android:layout_marginTop="5dp"
+                    android:text="旅行直播"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </com.oliver.oltravel.Fragment.ScrollInterceptScrollView>
+
+
+
+</RelativeLayout>

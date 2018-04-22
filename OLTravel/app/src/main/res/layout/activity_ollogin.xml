@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OLLoginActivity">
+
+    <!--头部-->
+    <RelativeLayout
+        android:id="@+id/layout_login_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#008cc9">
+
+        <ImageView
+            android:id="@+id/login_Img_Close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/login_close"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/login_Img_Close"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_username_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_login_header"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+
+        <EditText
+            android:id="@+id/edit_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户登录名/邮箱/手机号"
+            android:layout_marginTop="5dp"
+            android:background="@null"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d8dde1"
+            android:layout_below="@+id/edit_username"
+            android:layout_marginTop="10dp">
+
+        </View>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/edit_password_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_username_view"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户登录名/邮箱/手机号"
+            android:layout_marginTop="5dp"
+            android:background="@null"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d8dde1"
+            android:layout_below="@+id/edit_password"
+            android:layout_marginTop="10dp">
+
+        </View>
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:layout_below="@+id/edit_password_view"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#f4f5f7"
+        />
+
+    <Button
+        android:id="@+id/forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btn"
+        android:text="忘记秘密"
+        android:textSize="15sp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#2999ce"
+        android:background="@null"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btn"
+        android:text="免费注册"
+        android:textSize="15sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:textColor="#2999ce"
+        android:background="@null"
+        />
+
+
+
+
+</RelativeLayout>
